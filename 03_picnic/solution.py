@@ -46,7 +46,8 @@ def main():
         bringing = ', '.join(items)
 
     print('You are bringing {}.'.format(bringing))
-
+    # print(f'You are bringing {bringing}.')
+    # print(__name__)
 
 # --------------------------------------------------
 if __name__ == '__main__':
