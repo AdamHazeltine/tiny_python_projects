@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""tests for picnic.py"""
+"""tests for solution.py"""
 
 import os
 from subprocess import getoutput
