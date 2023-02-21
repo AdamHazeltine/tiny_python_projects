@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 """Jump the Five"""
 
 import argparse
@@ -26,9 +25,8 @@ def main():
     jumper = {'1': '9', '2': '8', '3': '7', '4': '6', '5': '0',
               '6': '4', '7': '3', '8': '2', '9': '1', '0': '5'}
 
-    for char in args.text:
-        print(jumper.get(char, char), end='')
-    print()
+    # Method 5: str.translate
+    print(args.text.translate(str.maketrans(jumper)))
 
 
 # --------------------------------------------------

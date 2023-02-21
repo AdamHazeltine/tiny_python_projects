@@ -4,7 +4,7 @@
 import os
 from subprocess import getstatusoutput
 
-prg = './jump.py'
+prg = './jump1.py'
 
 
 # --------------------------------------------------
