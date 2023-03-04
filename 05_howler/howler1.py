@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
-"""Low-memory Howler"""
+"""Howler"""
 
 import argparse
 import os
-import io
 import sys
 
 
@@ -20,7 +19,7 @@ def get_args():
                         type=str,
                         help='Input string or file')
 
-    parser.add_argument('-o', 
+    parser.add_argument('-o',
                         '--outfile',
                         help='Output filename',
                         metavar='str',
@@ -30,21 +29,17 @@ def get_args():
     args = parser.parse_args()
 
     if os.path.isfile(args.text):
-        args.text = open(args.text)
-    else:
-        args.text = io.StringIO(args.text + '\n')
+        args.text = open(args.text).read().rstrip()
 
     return args
 
 
 # --------------------------------------------------
 def main():
-    """Make a jazz noise here"""
 
     args = get_args()
     out_fh = open(args.outfile, 'wt') if args.outfile else sys.stdout
-    for line in args.text:
-        out_fh.write(line.upper())
+    out_fh.write(args.text.upper() + '\n')
     out_fh.close()
 
 
