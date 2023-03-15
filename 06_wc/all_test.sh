@@ -6,7 +6,7 @@ PRG="wc.py"
 for FILE in solution*.py; do
     echo "==> ${FILE} <==" 
     cp "$FILE" "$PRG"
-    make test
+    python3 -m pytest -xv test.py
 done
 
 echo "Done."

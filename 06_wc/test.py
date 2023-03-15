@@ -7,7 +7,7 @@ import re
 import string
 from subprocess import getstatusoutput
 
-prg = './wc.py'
+prg = './wc1.py'
 empty = './inputs/empty.txt'
 one_line = './inputs/one.txt'
 two_lines = './inputs/two.txt'
