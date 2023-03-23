@@ -7,7 +7,7 @@ import random
 import string
 from subprocess import getstatusoutput
 
-prg = './gashlycrumb.py'
+prg = './gashlycrumb1.py'
 
 
 # --------------------------------------------------
